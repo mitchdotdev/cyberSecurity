@@ -6,6 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
+<<<<<<< HEAD
     <width>917</width>
     <height>665</height>
    </rect>
@@ -23,6 +24,45 @@
      <height>22</height>
     </rect>
    </property>
+=======
+    <width>475</width>
+    <height>230</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>iCyberSecurity</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Welcome</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Packages</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Reviews</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Help</string>
+       </attribute>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+>>>>>>> c31c63d0cdd7a4737e287c03c889004e8a54226e
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
