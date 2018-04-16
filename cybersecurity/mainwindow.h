@@ -16,6 +16,13 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+private slots:
+    void on_firstTestimonial_clicked();
+
+    void on_secondTestimonial_clicked();
+
+    void on_thirdTestimonial_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
