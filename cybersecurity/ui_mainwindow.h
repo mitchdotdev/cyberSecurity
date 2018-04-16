@@ -15,9 +15,9 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenuBar>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -30,11 +30,12 @@ public:
     QWidget *centralWidget;
     QVBoxLayout *verticalLayout;
     QTabWidget *tabWidget;
-    QWidget *tab;
-    QWidget *tab_2;
-    QWidget *tab_3;
-    QWidget *tab_4;
-    QMenuBar *menuBar;
+    QWidget *welcomeTab;
+    QTextEdit *welcomeText;
+    QWidget *packageTab;
+    QWidget *reviewsTab;
+    QWidget *helpTab;
+    QTextEdit *helpText;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -42,7 +43,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(430, 300);
+        MainWindow->resize(475, 230);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         verticalLayout = new QVBoxLayout(centralWidget);
@@ -51,26 +52,31 @@ public:
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tab = new QWidget();
-        tab->setObjectName(QStringLiteral("tab"));
-        tabWidget->addTab(tab, QString());
-        tab_2 = new QWidget();
-        tab_2->setObjectName(QStringLiteral("tab_2"));
-        tabWidget->addTab(tab_2, QString());
-        tab_3 = new QWidget();
-        tab_3->setObjectName(QStringLiteral("tab_3"));
-        tabWidget->addTab(tab_3, QString());
-        tab_4 = new QWidget();
-        tab_4->setObjectName(QStringLiteral("tab_4"));
-        tabWidget->addTab(tab_4, QString());
+        welcomeTab = new QWidget();
+        welcomeTab->setObjectName(QStringLiteral("welcomeTab"));
+        welcomeText = new QTextEdit(welcomeTab);
+        welcomeText->setObjectName(QStringLiteral("welcomeText"));
+        welcomeText->setGeometry(QRect(0, 0, 461, 171));
+        tabWidget->addTab(welcomeTab, QString());
+        packageTab = new QWidget();
+        packageTab->setObjectName(QStringLiteral("packageTab"));
+        tabWidget->addTab(packageTab, QString());
+        reviewsTab = new QWidget();
+        reviewsTab->setObjectName(QStringLiteral("reviewsTab"));
+        tabWidget->addTab(reviewsTab, QString());
+        helpTab = new QWidget();
+        helpTab->setObjectName(QStringLiteral("helpTab"));
+        helpText = new QTextEdit(helpTab);
+        helpText->setObjectName(QStringLiteral("helpText"));
+        helpText->setGeometry(QRect(0, 0, 461, 161));
+        helpText->setFrameShape(QFrame::NoFrame);
+        helpText->setFrameShadow(QFrame::Plain);
+        helpText->setReadOnly(true);
+        tabWidget->addTab(helpTab, QString());
 
         verticalLayout->addWidget(tabWidget);
 
         MainWindow->setCentralWidget(centralWidget);
-        menuBar = new QMenuBar(MainWindow);
-        menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 430, 17));
-        MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
         MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
@@ -89,10 +95,10 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "iCyberSecurity", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Welcome", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Packages", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Reviews", nullptr));
-        tabWidget->setTabText(tabWidget->indexOf(tab_4), QApplication::translate("MainWindow", "Help", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(welcomeTab), QApplication::translate("MainWindow", "Welcome", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(packageTab), QApplication::translate("MainWindow", "Packages", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(reviewsTab), QApplication::translate("MainWindow", "Reviews", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(helpTab), QApplication::translate("MainWindow", "Help", nullptr));
     } // retranslateUi
 
 };

@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTextEdit>
 
 namespace Ui {
 class MainWindow;
