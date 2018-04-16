@@ -2,6 +2,8 @@
 *.pro.user.*
 *.Debug
 *.Release
+*.o
+moc_*
 cybersecurity/Makefile
 cybersecurity/Makefile.*
 cybersecurity/debug/
