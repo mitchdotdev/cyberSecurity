@@ -13,11 +13,15 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextEdit>
@@ -47,6 +51,32 @@ public:
     QRadioButton *thirdTestimonial;
     QTextEdit *testimonial2_text;
     QTextEdit *testimonial3_text;
+    QWidget *tab;
+    QPushButton *pushButton_order;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout_2;
+    QRadioButton *radioButton_Regular;
+    QRadioButton *radioButton_Premium;
+    QRadioButton *radioButton_Executive;
+    QWidget *widget1;
+    QVBoxLayout *verticalLayout_8;
+    QVBoxLayout *verticalLayout_4;
+    QLabel *label_Name;
+    QLineEdit *lineEdit_name;
+    QVBoxLayout *verticalLayout_5;
+    QLabel *label_Address;
+    QLineEdit *lineEdit_address;
+    QVBoxLayout *verticalLayout_6;
+    QLabel *label_ZipCode;
+    QLineEdit *lineEdit_zipCode;
+    QVBoxLayout *verticalLayout_7;
+    QLabel *label_State;
+    QComboBox *comboBox_States;
+    QWidget *widget2;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_Pick_Package;
+    QSpacerItem *horizontalSpacer;
+    QLabel *label_Enter_Info;
     QWidget *helpTab;
     QTextEdit *helpText;
     QTextEdit *contactText_2;
@@ -77,10 +107,10 @@ public:
         packageTab->setObjectName(QStringLiteral("packageTab"));
         label = new QLabel(packageTab);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(20, 10, 711, 351));
+        label->setGeometry(QRect(40, 10, 711, 351));
         label_2 = new QLabel(packageTab);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(20, 380, 911, 191));
+        label_2->setGeometry(QRect(10, 420, 1021, 191));
         tabWidget->addTab(packageTab, QString());
         reviewsTab = new QWidget();
         reviewsTab->setObjectName(QStringLiteral("reviewsTab"));
@@ -138,6 +168,198 @@ public:
         testimonial1_text->raise();
         testimonial2_text->raise();
         testimonial3_text->raise();
+        tab = new QWidget();
+        tab->setObjectName(QStringLiteral("tab"));
+        pushButton_order = new QPushButton(tab);
+        pushButton_order->setObjectName(QStringLiteral("pushButton_order"));
+        pushButton_order->setGeometry(QRect(820, 320, 121, 31));
+        QFont font;
+        font.setPointSize(19);
+        pushButton_order->setFont(font);
+        widget = new QWidget(tab);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(80, 270, 271, 211));
+        verticalLayout_2 = new QVBoxLayout(widget);
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
+        radioButton_Regular = new QRadioButton(widget);
+        radioButton_Regular->setObjectName(QStringLiteral("radioButton_Regular"));
+        QFont font1;
+        font1.setPointSize(16);
+        radioButton_Regular->setFont(font1);
+        radioButton_Regular->setIconSize(QSize(16, 16));
+
+        verticalLayout_2->addWidget(radioButton_Regular);
+
+        radioButton_Premium = new QRadioButton(widget);
+        radioButton_Premium->setObjectName(QStringLiteral("radioButton_Premium"));
+        radioButton_Premium->setFont(font1);
+
+        verticalLayout_2->addWidget(radioButton_Premium);
+
+        radioButton_Executive = new QRadioButton(widget);
+        radioButton_Executive->setObjectName(QStringLiteral("radioButton_Executive"));
+        radioButton_Executive->setFont(font1);
+
+        verticalLayout_2->addWidget(radioButton_Executive);
+
+        widget1 = new QWidget(tab);
+        widget1->setObjectName(QStringLiteral("widget1"));
+        widget1->setGeometry(QRect(431, 239, 241, 281));
+        verticalLayout_8 = new QVBoxLayout(widget1);
+        verticalLayout_8->setSpacing(6);
+        verticalLayout_8->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_8->setObjectName(QStringLiteral("verticalLayout_8"));
+        verticalLayout_8->setContentsMargins(0, 0, 0, 0);
+        verticalLayout_4 = new QVBoxLayout();
+        verticalLayout_4->setSpacing(6);
+        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        label_Name = new QLabel(widget1);
+        label_Name->setObjectName(QStringLiteral("label_Name"));
+        QFont font2;
+        font2.setPointSize(15);
+        label_Name->setFont(font2);
+
+        verticalLayout_4->addWidget(label_Name);
+
+        lineEdit_name = new QLineEdit(widget1);
+        lineEdit_name->setObjectName(QStringLiteral("lineEdit_name"));
+
+        verticalLayout_4->addWidget(lineEdit_name);
+
+
+        verticalLayout_8->addLayout(verticalLayout_4);
+
+        verticalLayout_5 = new QVBoxLayout();
+        verticalLayout_5->setSpacing(6);
+        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
+        label_Address = new QLabel(widget1);
+        label_Address->setObjectName(QStringLiteral("label_Address"));
+        label_Address->setFont(font2);
+
+        verticalLayout_5->addWidget(label_Address);
+
+        lineEdit_address = new QLineEdit(widget1);
+        lineEdit_address->setObjectName(QStringLiteral("lineEdit_address"));
+
+        verticalLayout_5->addWidget(lineEdit_address);
+
+
+        verticalLayout_8->addLayout(verticalLayout_5);
+
+        verticalLayout_6 = new QVBoxLayout();
+        verticalLayout_6->setSpacing(6);
+        verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
+        label_ZipCode = new QLabel(widget1);
+        label_ZipCode->setObjectName(QStringLiteral("label_ZipCode"));
+        label_ZipCode->setFont(font2);
+
+        verticalLayout_6->addWidget(label_ZipCode);
+
+        lineEdit_zipCode = new QLineEdit(widget1);
+        lineEdit_zipCode->setObjectName(QStringLiteral("lineEdit_zipCode"));
+
+        verticalLayout_6->addWidget(lineEdit_zipCode);
+
+
+        verticalLayout_8->addLayout(verticalLayout_6);
+
+        verticalLayout_7 = new QVBoxLayout();
+        verticalLayout_7->setSpacing(6);
+        verticalLayout_7->setObjectName(QStringLiteral("verticalLayout_7"));
+        label_State = new QLabel(widget1);
+        label_State->setObjectName(QStringLiteral("label_State"));
+        label_State->setFont(font2);
+
+        verticalLayout_7->addWidget(label_State);
+
+        comboBox_States = new QComboBox(widget1);
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->addItem(QString());
+        comboBox_States->setObjectName(QStringLiteral("comboBox_States"));
+
+        verticalLayout_7->addWidget(comboBox_States);
+
+
+        verticalLayout_8->addLayout(verticalLayout_7);
+
+        widget2 = new QWidget(tab);
+        widget2->setObjectName(QStringLiteral("widget2"));
+        widget2->setGeometry(QRect(112, 87, 431, 22));
+        horizontalLayout_2 = new QHBoxLayout(widget2);
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        label_Pick_Package = new QLabel(widget2);
+        label_Pick_Package->setObjectName(QStringLiteral("label_Pick_Package"));
+        label_Pick_Package->setFont(font2);
+        label_Pick_Package->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_2->addWidget(label_Pick_Package);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer);
+
+        label_Enter_Info = new QLabel(widget2);
+        label_Enter_Info->setObjectName(QStringLiteral("label_Enter_Info"));
+        label_Enter_Info->setFont(font2);
+        label_Enter_Info->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_2->addWidget(label_Enter_Info);
+
+        tabWidget->addTab(tab, QString());
         helpTab = new QWidget();
         helpTab->setObjectName(QStringLiteral("helpTab"));
         helpText = new QTextEdit(helpTab);
@@ -152,6 +374,7 @@ public:
         contactText_2->setFrameShape(QFrame::NoFrame);
         contactText_2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         contactText_2->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        contactText_2->setReadOnly(true);
         tabWidget->addTab(helpTab, QString());
 
         verticalLayout->addWidget(tabWidget);
@@ -166,7 +389,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -202,10 +425,10 @@ public:
 "", nullptr));
         label_2->setText(QApplication::translate("MainWindow", "Guarantee Policy:\n"
 "\n"
-"      Services are guaranteed to protect from malware, spyware, viruses and hacking only when used properly. iCyberSecurity Inc. will not take responsibility for failure of the organization \n"
-"to follow through with proper security protocols. If there is a security breach, iCyberSecurity will reimbursed the client 6 months\342\200\231 fees and a gaggle of super fluffy pet bunnies. In \n"
-"addition iCyberSecurity will perform a clean sweep of the system and remove all malicious software and security breaches. In order to verify that the client adheres to the proper protocols, \n"
-"logs of computer usage, log-ins, uploads and downloads, web usage and emails will be kept.\n"
+"      Services are guaranteed to protect from malware, spyware, viruses and hacking only when used properly. iCyberSecurity Inc. will not take responsibility for failure of\n"
+"the organization to follow through with proper security protocols. If there is a security breach, iCyberSecurity will reimbursed the client 6 months\342\200\231 fees and a gaggle\n"
+"of super fluffy pet bunnies. In addition iCyberSecurity will perform a clean sweep of the system and remove all malicious software and security breaches. In order to\n"
+"verify that the client adheres to the proper protocols, logs of computer usage, log-ins, uploads and downloads, web usage and emails will be kept.\n"
 "", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(packageTab), QApplication::translate("MainWindow", "Packages", nullptr));
         testimonial1_text->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
@@ -236,6 +459,68 @@ public:
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text"
                         "-indent:0px;\"><span style=\" font-size:24pt;\"> (founder of Facebook)</span></p></body></html>", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(reviewsTab), QApplication::translate("MainWindow", "Reviews", nullptr));
+        pushButton_order->setText(QApplication::translate("MainWindow", "ORDER!", nullptr));
+        radioButton_Regular->setText(QApplication::translate("MainWindow", "Regular $500/month", nullptr));
+        radioButton_Premium->setText(QApplication::translate("MainWindow", "Premium $1000/month", nullptr));
+        radioButton_Executive->setText(QApplication::translate("MainWindow", "Executive $1200/month", nullptr));
+        label_Name->setText(QApplication::translate("MainWindow", "Name", nullptr));
+        label_Address->setText(QApplication::translate("MainWindow", "Street Address", nullptr));
+        label_ZipCode->setText(QApplication::translate("MainWindow", "Zip Code", nullptr));
+        label_State->setText(QApplication::translate("MainWindow", "State", nullptr));
+        comboBox_States->setItemText(0, QApplication::translate("MainWindow", "AL", nullptr));
+        comboBox_States->setItemText(1, QApplication::translate("MainWindow", "AK", nullptr));
+        comboBox_States->setItemText(2, QApplication::translate("MainWindow", "AZ", nullptr));
+        comboBox_States->setItemText(3, QApplication::translate("MainWindow", "AR", nullptr));
+        comboBox_States->setItemText(4, QApplication::translate("MainWindow", "CA", nullptr));
+        comboBox_States->setItemText(5, QApplication::translate("MainWindow", "CO", nullptr));
+        comboBox_States->setItemText(6, QApplication::translate("MainWindow", "CT", nullptr));
+        comboBox_States->setItemText(7, QApplication::translate("MainWindow", "DE", nullptr));
+        comboBox_States->setItemText(8, QApplication::translate("MainWindow", "FL", nullptr));
+        comboBox_States->setItemText(9, QApplication::translate("MainWindow", "GA", nullptr));
+        comboBox_States->setItemText(10, QApplication::translate("MainWindow", "HI", nullptr));
+        comboBox_States->setItemText(11, QApplication::translate("MainWindow", "ID", nullptr));
+        comboBox_States->setItemText(12, QApplication::translate("MainWindow", "IL", nullptr));
+        comboBox_States->setItemText(13, QApplication::translate("MainWindow", "IN", nullptr));
+        comboBox_States->setItemText(14, QApplication::translate("MainWindow", "IA", nullptr));
+        comboBox_States->setItemText(15, QApplication::translate("MainWindow", "KA", nullptr));
+        comboBox_States->setItemText(16, QApplication::translate("MainWindow", "KY", nullptr));
+        comboBox_States->setItemText(17, QApplication::translate("MainWindow", "LA", nullptr));
+        comboBox_States->setItemText(18, QApplication::translate("MainWindow", "ME", nullptr));
+        comboBox_States->setItemText(19, QApplication::translate("MainWindow", "MD", nullptr));
+        comboBox_States->setItemText(20, QApplication::translate("MainWindow", "MA", nullptr));
+        comboBox_States->setItemText(21, QApplication::translate("MainWindow", "MI", nullptr));
+        comboBox_States->setItemText(22, QApplication::translate("MainWindow", "MN", nullptr));
+        comboBox_States->setItemText(23, QApplication::translate("MainWindow", "MS", nullptr));
+        comboBox_States->setItemText(24, QApplication::translate("MainWindow", "MO", nullptr));
+        comboBox_States->setItemText(25, QApplication::translate("MainWindow", "MT", nullptr));
+        comboBox_States->setItemText(26, QApplication::translate("MainWindow", "NE", nullptr));
+        comboBox_States->setItemText(27, QApplication::translate("MainWindow", "NV", nullptr));
+        comboBox_States->setItemText(28, QApplication::translate("MainWindow", "NH", nullptr));
+        comboBox_States->setItemText(29, QApplication::translate("MainWindow", "NJ", nullptr));
+        comboBox_States->setItemText(30, QApplication::translate("MainWindow", "NM", nullptr));
+        comboBox_States->setItemText(31, QApplication::translate("MainWindow", "NY", nullptr));
+        comboBox_States->setItemText(32, QApplication::translate("MainWindow", "NC", nullptr));
+        comboBox_States->setItemText(33, QApplication::translate("MainWindow", "ND", nullptr));
+        comboBox_States->setItemText(34, QApplication::translate("MainWindow", "OH", nullptr));
+        comboBox_States->setItemText(35, QApplication::translate("MainWindow", "OK", nullptr));
+        comboBox_States->setItemText(36, QApplication::translate("MainWindow", "OR", nullptr));
+        comboBox_States->setItemText(37, QApplication::translate("MainWindow", "PA", nullptr));
+        comboBox_States->setItemText(38, QApplication::translate("MainWindow", "RI", nullptr));
+        comboBox_States->setItemText(39, QApplication::translate("MainWindow", "SC", nullptr));
+        comboBox_States->setItemText(40, QApplication::translate("MainWindow", "SD", nullptr));
+        comboBox_States->setItemText(41, QApplication::translate("MainWindow", "TN", nullptr));
+        comboBox_States->setItemText(42, QApplication::translate("MainWindow", "TX", nullptr));
+        comboBox_States->setItemText(43, QApplication::translate("MainWindow", "UT", nullptr));
+        comboBox_States->setItemText(44, QApplication::translate("MainWindow", "VT", nullptr));
+        comboBox_States->setItemText(45, QApplication::translate("MainWindow", "VA", nullptr));
+        comboBox_States->setItemText(46, QApplication::translate("MainWindow", "WA", nullptr));
+        comboBox_States->setItemText(47, QApplication::translate("MainWindow", "WV", nullptr));
+        comboBox_States->setItemText(48, QApplication::translate("MainWindow", "WI", nullptr));
+        comboBox_States->setItemText(49, QApplication::translate("MainWindow", "WY", nullptr));
+
+        label_Pick_Package->setText(QApplication::translate("MainWindow", "Pick your package", nullptr));
+        label_Enter_Info->setText(QApplication::translate("MainWindow", "Enter your info", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Order", nullptr));
         contactText_2->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"

@@ -18,7 +18,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="welcomeTab">
        <attribute name="title">
@@ -42,7 +42,7 @@
        <widget class="QLabel" name="label">
         <property name="geometry">
          <rect>
-          <x>20</x>
+          <x>40</x>
           <y>10</y>
           <width>711</width>
           <height>351</height>
@@ -77,19 +77,19 @@ Executive - $1200/month
        <widget class="QLabel" name="label_2">
         <property name="geometry">
          <rect>
-          <x>20</x>
-          <y>380</y>
-          <width>911</width>
+          <x>10</x>
+          <y>420</y>
+          <width>1021</width>
           <height>191</height>
          </rect>
         </property>
         <property name="text">
          <string>Guarantee Policy:
 
-      Services are guaranteed to protect from malware, spyware, viruses and hacking only when used properly. iCyberSecurity Inc. will not take responsibility for failure of the organization 
-to follow through with proper security protocols. If there is a security breach, iCyberSecurity will reimbursed the client 6 months’ fees and a gaggle of super fluffy pet bunnies. In 
-addition iCyberSecurity will perform a clean sweep of the system and remove all malicious software and security breaches. In order to verify that the client adheres to the proper protocols, 
-logs of computer usage, log-ins, uploads and downloads, web usage and emails will be kept.
+      Services are guaranteed to protect from malware, spyware, viruses and hacking only when used properly. iCyberSecurity Inc. will not take responsibility for failure of
+the organization to follow through with proper security protocols. If there is a security breach, iCyberSecurity will reimbursed the client 6 months’ fees and a gaggle
+of super fluffy pet bunnies. In addition iCyberSecurity will perform a clean sweep of the system and remove all malicious software and security breaches. In order to
+verify that the client adheres to the proper protocols, logs of computer usage, log-ins, uploads and downloads, web usage and emails will be kept.
 </string>
         </property>
        </widget>
@@ -232,6 +232,477 @@ p, li { white-space: pre-wrap; }
        <zorder>testimonial2_text</zorder>
        <zorder>testimonial3_text</zorder>
       </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Order</string>
+       </attribute>
+       <widget class="QPushButton" name="pushButton_order">
+        <property name="geometry">
+         <rect>
+          <x>820</x>
+          <y>320</y>
+          <width>121</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>19</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>ORDER!</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>270</y>
+          <width>271</width>
+          <height>211</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QRadioButton" name="radioButton_Regular">
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Regular $500/month</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>16</width>
+             <height>16</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton_Premium">
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Premium $1000/month</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="radioButton_Executive">
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Executive $1200/month</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>431</x>
+          <y>239</y>
+          <width>241</width>
+          <height>281</height>
+         </rect>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_Name">
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_name"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <item>
+            <widget class="QLabel" name="label_Address">
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Street Address</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_address"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_ZipCode">
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Zip Code</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="lineEdit_zipCode"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <item>
+            <widget class="QLabel" name="label_State">
+             <property name="font">
+              <font>
+               <pointsize>15</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>State</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="comboBox_States">
+             <item>
+              <property name="text">
+               <string>AL</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>AK</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>AZ</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>AR</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>CA</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>CO</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>CT</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>DE</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>FL</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>GA</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>HI</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ID</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>IL</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>IN</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>IA</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>KA</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>KY</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>LA</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ME</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>MD</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>MA</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>MI</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>MN</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>MS</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>MO</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>MT</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>NE</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>NV</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>NH</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>NJ</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>NM</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>NY</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>NC</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>ND</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>OH</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>OK</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>OR</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>PA</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>RI</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>SC</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>SD</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>TN</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>TX</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>UT</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>VT</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>VA</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>WA</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>WV</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>WI</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>WY</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>112</x>
+          <y>87</y>
+          <width>431</width>
+          <height>22</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="label_Pick_Package">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Pick your package</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_Enter_Info">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Enter your info</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
       <widget class="QWidget" name="helpTab">
        <attribute name="title">
         <string>Help</string>
@@ -272,6 +743,9 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="horizontalScrollBarPolicy">
          <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
         </property>
         <property name="html">
          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;

@@ -2,7 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 #include <QTextEdit>
+#include <iostream>
 
 namespace Ui {
 class MainWindow;
@@ -22,6 +24,8 @@ private slots:
     void on_secondTestimonial_clicked();
 
     void on_thirdTestimonial_clicked();
+
+    void on_pushButton_order_clicked();
 
 private:
     Ui::MainWindow *ui;
