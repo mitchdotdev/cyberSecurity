@@ -63,7 +63,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_order_clicked()
 {
     QMessageBox orderMsg;
-    if( ui->lineEdit_name->text().isEmpty() || ui->lineEdit_address->text().isEmpty() || ui->lineEdit_zipCode->text().isEmpty() ||
+    if( ui->lineEdit_name->text().isEmpty() || ui->lineEdit_address->text().isEmpty() || ui->spinBox_zipCode->text().isEmpty() ||
         !(ui->radioButton_Regular->isChecked() || ui->radioButton_Premium->isChecked() || ui->radioButton_Executive->isChecked()) )
     {
         orderMsg.setText("All text fields must be completed");
@@ -74,6 +74,6 @@ void MainWindow::on_pushButton_order_clicked()
 
         ui->lineEdit_name->clear();
         ui->lineEdit_address->clear();
-        ui->lineEdit_zipCode->clear();
+        ui->spinBox_zipCode->clear();
     }
 }

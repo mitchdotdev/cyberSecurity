@@ -22,6 +22,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextEdit>
@@ -53,12 +54,12 @@ public:
     QTextEdit *testimonial3_text;
     QWidget *tab;
     QPushButton *pushButton_order;
-    QWidget *widget;
+    QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_2;
     QRadioButton *radioButton_Regular;
     QRadioButton *radioButton_Premium;
     QRadioButton *radioButton_Executive;
-    QWidget *widget1;
+    QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_8;
     QVBoxLayout *verticalLayout_4;
     QLabel *label_Name;
@@ -68,11 +69,11 @@ public:
     QLineEdit *lineEdit_address;
     QVBoxLayout *verticalLayout_6;
     QLabel *label_ZipCode;
-    QLineEdit *lineEdit_zipCode;
+    QSpinBox *spinBox_zipCode;
     QVBoxLayout *verticalLayout_7;
     QLabel *label_State;
     QComboBox *comboBox_States;
-    QWidget *widget2;
+    QWidget *layoutWidget3;
     QHBoxLayout *horizontalLayout_2;
     QLabel *label_Pick_Package;
     QSpacerItem *horizontalSpacer;
@@ -176,15 +177,15 @@ public:
         QFont font;
         font.setPointSize(19);
         pushButton_order->setFont(font);
-        widget = new QWidget(tab);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(80, 270, 271, 211));
-        verticalLayout_2 = new QVBoxLayout(widget);
+        layoutWidget1 = new QWidget(tab);
+        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(80, 270, 271, 211));
+        verticalLayout_2 = new QVBoxLayout(layoutWidget1);
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setContentsMargins(11, 11, 11, 11);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        radioButton_Regular = new QRadioButton(widget);
+        radioButton_Regular = new QRadioButton(layoutWidget1);
         radioButton_Regular->setObjectName(QStringLiteral("radioButton_Regular"));
         QFont font1;
         font1.setPointSize(16);
@@ -193,22 +194,22 @@ public:
 
         verticalLayout_2->addWidget(radioButton_Regular);
 
-        radioButton_Premium = new QRadioButton(widget);
+        radioButton_Premium = new QRadioButton(layoutWidget1);
         radioButton_Premium->setObjectName(QStringLiteral("radioButton_Premium"));
         radioButton_Premium->setFont(font1);
 
         verticalLayout_2->addWidget(radioButton_Premium);
 
-        radioButton_Executive = new QRadioButton(widget);
+        radioButton_Executive = new QRadioButton(layoutWidget1);
         radioButton_Executive->setObjectName(QStringLiteral("radioButton_Executive"));
         radioButton_Executive->setFont(font1);
 
         verticalLayout_2->addWidget(radioButton_Executive);
 
-        widget1 = new QWidget(tab);
-        widget1->setObjectName(QStringLiteral("widget1"));
-        widget1->setGeometry(QRect(431, 239, 241, 281));
-        verticalLayout_8 = new QVBoxLayout(widget1);
+        layoutWidget2 = new QWidget(tab);
+        layoutWidget2->setObjectName(QStringLiteral("layoutWidget2"));
+        layoutWidget2->setGeometry(QRect(431, 239, 241, 281));
+        verticalLayout_8 = new QVBoxLayout(layoutWidget2);
         verticalLayout_8->setSpacing(6);
         verticalLayout_8->setContentsMargins(11, 11, 11, 11);
         verticalLayout_8->setObjectName(QStringLiteral("verticalLayout_8"));
@@ -216,7 +217,7 @@ public:
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setSpacing(6);
         verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
-        label_Name = new QLabel(widget1);
+        label_Name = new QLabel(layoutWidget2);
         label_Name->setObjectName(QStringLiteral("label_Name"));
         QFont font2;
         font2.setPointSize(15);
@@ -224,7 +225,7 @@ public:
 
         verticalLayout_4->addWidget(label_Name);
 
-        lineEdit_name = new QLineEdit(widget1);
+        lineEdit_name = new QLineEdit(layoutWidget2);
         lineEdit_name->setObjectName(QStringLiteral("lineEdit_name"));
 
         verticalLayout_4->addWidget(lineEdit_name);
@@ -235,13 +236,13 @@ public:
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setSpacing(6);
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
-        label_Address = new QLabel(widget1);
+        label_Address = new QLabel(layoutWidget2);
         label_Address->setObjectName(QStringLiteral("label_Address"));
         label_Address->setFont(font2);
 
         verticalLayout_5->addWidget(label_Address);
 
-        lineEdit_address = new QLineEdit(widget1);
+        lineEdit_address = new QLineEdit(layoutWidget2);
         lineEdit_address->setObjectName(QStringLiteral("lineEdit_address"));
 
         verticalLayout_5->addWidget(lineEdit_address);
@@ -252,16 +253,18 @@ public:
         verticalLayout_6 = new QVBoxLayout();
         verticalLayout_6->setSpacing(6);
         verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
-        label_ZipCode = new QLabel(widget1);
+        label_ZipCode = new QLabel(layoutWidget2);
         label_ZipCode->setObjectName(QStringLiteral("label_ZipCode"));
         label_ZipCode->setFont(font2);
 
         verticalLayout_6->addWidget(label_ZipCode);
 
-        lineEdit_zipCode = new QLineEdit(widget1);
-        lineEdit_zipCode->setObjectName(QStringLiteral("lineEdit_zipCode"));
+        spinBox_zipCode = new QSpinBox(layoutWidget2);
+        spinBox_zipCode->setObjectName(QStringLiteral("spinBox_zipCode"));
+        spinBox_zipCode->setButtonSymbols(QAbstractSpinBox::NoButtons);
+        spinBox_zipCode->setMaximum(99999);
 
-        verticalLayout_6->addWidget(lineEdit_zipCode);
+        verticalLayout_6->addWidget(spinBox_zipCode);
 
 
         verticalLayout_8->addLayout(verticalLayout_6);
@@ -269,13 +272,13 @@ public:
         verticalLayout_7 = new QVBoxLayout();
         verticalLayout_7->setSpacing(6);
         verticalLayout_7->setObjectName(QStringLiteral("verticalLayout_7"));
-        label_State = new QLabel(widget1);
+        label_State = new QLabel(layoutWidget2);
         label_State->setObjectName(QStringLiteral("label_State"));
         label_State->setFont(font2);
 
         verticalLayout_7->addWidget(label_State);
 
-        comboBox_States = new QComboBox(widget1);
+        comboBox_States = new QComboBox(layoutWidget2);
         comboBox_States->addItem(QString());
         comboBox_States->addItem(QString());
         comboBox_States->addItem(QString());
@@ -333,15 +336,15 @@ public:
 
         verticalLayout_8->addLayout(verticalLayout_7);
 
-        widget2 = new QWidget(tab);
-        widget2->setObjectName(QStringLiteral("widget2"));
-        widget2->setGeometry(QRect(112, 87, 431, 22));
-        horizontalLayout_2 = new QHBoxLayout(widget2);
+        layoutWidget3 = new QWidget(tab);
+        layoutWidget3->setObjectName(QStringLiteral("layoutWidget3"));
+        layoutWidget3->setGeometry(QRect(112, 87, 431, 22));
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget3);
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_Pick_Package = new QLabel(widget2);
+        label_Pick_Package = new QLabel(layoutWidget3);
         label_Pick_Package->setObjectName(QStringLiteral("label_Pick_Package"));
         label_Pick_Package->setFont(font2);
         label_Pick_Package->setAlignment(Qt::AlignCenter);
@@ -352,7 +355,7 @@ public:
 
         horizontalLayout_2->addItem(horizontalSpacer);
 
-        label_Enter_Info = new QLabel(widget2);
+        label_Enter_Info = new QLabel(layoutWidget3);
         label_Enter_Info->setObjectName(QStringLiteral("label_Enter_Info"));
         label_Enter_Info->setFont(font2);
         label_Enter_Info->setAlignment(Qt::AlignCenter);
@@ -389,7 +392,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(3);
+        tabWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

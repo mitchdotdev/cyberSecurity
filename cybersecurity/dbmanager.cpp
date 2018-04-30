@@ -3,9 +3,9 @@
 DbManager::DbManager()
 {
     cyberDB = QSqlDatabase::addDatabase("QSQLITE");
-    cyberDB.setDatabaseName(":/new/database/cyber.db");
+    cyberDB.setDatabaseName("cyber.db");
 
-    if( QFile::exists(":/new/database/bulk.db") )
+    if( QFile::exists("cyber.db") )
     {
         if (!cyberDB.open()) //be careful, SQLITE will create the db if it doesn't exist and return true.
         {
