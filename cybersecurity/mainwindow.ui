@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1053</width>
-    <height>710</height>
+    <width>438</width>
+    <height>382</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>iCyberSecurity</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
@@ -24,104 +24,61 @@
        <attribute name="title">
         <string>Welcome</string>
        </attribute>
-       <widget class="QTextEdit" name="welcomeText">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>1031</width>
-          <height>461</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="userEdit">
-        <property name="geometry">
-         <rect>
-          <x>210</x>
-          <y>550</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="passEdit">
-        <property name="geometry">
-         <rect>
-          <x>210</x>
-          <y>580</y>
-          <width>113</width>
-          <height>20</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_3">
-        <property name="geometry">
-         <rect>
-          <x>160</x>
-          <y>550</y>
-          <width>35</width>
-          <height>10</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Username</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_4">
-        <property name="geometry">
-         <rect>
-          <x>160</x>
-          <y>590</y>
-          <width>35</width>
-          <height>10</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Password</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="loginButton">
-        <property name="geometry">
-         <rect>
-          <x>230</x>
-          <y>620</y>
-          <width>80</width>
-          <height>16</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Login</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="loginStatus">
-        <property name="geometry">
-         <rect>
-          <x>250</x>
-          <y>610</y>
-          <width>35</width>
-          <height>10</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QTextEdit" name="welcomeText">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Username</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="userEdit"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>Password</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="passEdit"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="loginStatus">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="loginButton">
+          <property name="text">
+           <string>Login</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="packageTab">
        <attribute name="title">
         <string>Packages</string>
        </attribute>
-       <widget class="QLabel" name="label">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>10</y>
-          <width>711</width>
-          <height>351</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Regular - $500/month
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>
+
+Regular - $500/month
 	•  Ensures that all passwords follow our security protocols.
 	•  Passes all traffic through out secure servers.
 	•  Scans all incoming emails and downloads for malware.
@@ -144,162 +101,96 @@ Executive - $1200/month
 	•  Implements a secure mode if there are any security breaches
 	•  Maintenance and upgrades against the latest security threats every month
 </string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_2">
-        <property name="geometry">
-         <rect>
-          <x>10</x>
-          <y>420</y>
-          <width>1021</width>
-          <height>191</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Guarantee Policy:
-
-      Services are guaranteed to protect from malware, spyware, viruses and hacking only when used properly. iCyberSecurity Inc. will not take responsibility for failure of
-the organization to follow through with proper security protocols. If there is a security breach, iCyberSecurity will reimbursed the client 6 months’ fees and a gaggle
-of super fluffy pet bunnies. In addition iCyberSecurity will perform a clean sweep of the system and remove all malicious software and security breaches. In order to
-verify that the client adheres to the proper protocols, logs of computer usage, log-ins, uploads and downloads, web usage and emails will be kept.
-</string>
-        </property>
-       </widget>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="guaranteeText">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="reviewsTab">
        <attribute name="title">
         <string>Reviews</string>
        </attribute>
-       <widget class="QTextEdit" name="testimonial1_text">
-        <property name="geometry">
-         <rect>
-          <x>240</x>
-          <y>100</y>
-          <width>541</width>
-          <height>131</height>
-         </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="verticalScrollBarPolicy">
-         <enum>Qt::ScrollBarAlwaysOff</enum>
-        </property>
-        <property name="horizontalScrollBarPolicy">
-         <enum>Qt::ScrollBarAlwaysOff</enum>
-        </property>
-        <property name="html">
-         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+       <layout class="QVBoxLayout" name="verticalLayout_11">
+        <item>
+         <widget class="QTextEdit" name="testimonial3_text">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text'; font-size:24pt;&quot;&gt;&amp;quot;iCyberSecurity has helped my small business stay safe from all kinds of cyber threats for 10+ years!&amp;quot;&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text'; font-size:24pt;&quot;&gt; - Jeff Bezos&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text'; font-size:24pt;&quot;&gt; (founder of some company called Amazon)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-       </widget>
-       <widget class="QWidget" name="layoutWidget">
-        <property name="geometry">
-         <rect>
-          <x>340</x>
-          <y>460</y>
-          <width>361</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
-          <widget class="QRadioButton" name="firstTestimonial">
-           <property name="text">
-            <string/>
-           </property>
-           <attribute name="buttonGroup">
-            <string notr="true">buttonGroup</string>
-           </attribute>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="secondTestimonial">
-           <property name="text">
-            <string/>
-           </property>
-           <attribute name="buttonGroup">
-            <string notr="true">buttonGroup</string>
-           </attribute>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="thirdTestimonial">
-           <property name="text">
-            <string/>
-           </property>
-           <attribute name="buttonGroup">
-            <string notr="true">buttonGroup</string>
-           </attribute>
-          </widget>
-         </item>
-        </layout>
-        <zorder>secondTestimonial</zorder>
-        <zorder>firstTestimonial</zorder>
-        <zorder>thirdTestimonial</zorder>
-       </widget>
-       <widget class="QTextEdit" name="testimonial2_text">
-        <property name="geometry">
-         <rect>
-          <x>280</x>
-          <y>100</y>
-          <width>461</width>
-          <height>181</height>
-         </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="verticalScrollBarPolicy">
-         <enum>Qt::ScrollBarAlwaysOff</enum>
-        </property>
-        <property name="horizontalScrollBarPolicy">
-         <enum>Qt::ScrollBarAlwaysOff</enum>
-        </property>
-        <property name="html">
-         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text';&quot;&gt;&amp;quot;Being a tech company security is of the utmost importance. iCyberSecurity has consistently been a step ahead and has protected us from potential cyber threats!&amp;quot;&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text';&quot;&gt; - Mark Zuckerberg&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text';&quot;&gt; (founder of Facebook)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="testimonial2_text">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text'; font-size:24pt;&quot;&gt;&amp;quot;Although we started as a small business, iCyberSecurity has provided top notch cyber security as we have scaled throughout the years!&amp;quot;&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text'; font-size:24pt;&quot;&gt; - Elon Musk&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text'; font-size:24pt;&quot;&gt; (founder of Tesla)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-       </widget>
-       <widget class="QTextEdit" name="testimonial3_text">
-        <property name="geometry">
-         <rect>
-          <x>270</x>
-          <y>100</y>
-          <width>461</width>
-          <height>181</height>
-         </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="verticalScrollBarPolicy">
-         <enum>Qt::ScrollBarAlwaysOff</enum>
-        </property>
-        <property name="horizontalScrollBarPolicy">
-         <enum>Qt::ScrollBarAlwaysOff</enum>
-        </property>
-        <property name="html">
-         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text';&quot;&gt;&amp;quot;Although we started as a small business, iCyberSecurity has provided top notch cyber security as we have scaled throughout the years!&amp;quot;&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text';&quot;&gt; - Elon Musk&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text';&quot;&gt; (founder of Tesla)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="testimonial1_text">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text'; font-size:24pt;&quot;&gt;&amp;quot;Being a tech company security is of the utmost importance. iCyberSecurity has consistently been a step ahead and has protected us from potential cyber threats!&amp;quot;&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text'; font-size:24pt;&quot;&gt; - Mark Zuckerberg&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text'; font-size:24pt;&quot;&gt; (founder of Facebook)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-       </widget>
-       <zorder>layoutWidget</zorder>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text';&quot;&gt;&amp;quot;iCyberSecurity has helped my small business stay safe from all kinds of cyber threats for 10+ years!&amp;quot;&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text';&quot;&gt; - Jeff Bezos&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text';&quot;&gt; (founder of some company called Amazon)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout"/>
+        </item>
+       </layout>
        <zorder>testimonial1_text</zorder>
        <zorder>testimonial2_text</zorder>
        <zorder>testimonial3_text</zorder>
@@ -308,526 +199,458 @@ p, li { white-space: pre-wrap; }
        <attribute name="title">
         <string>Order</string>
        </attribute>
-       <widget class="QPushButton" name="pushButton_order">
-        <property name="geometry">
-         <rect>
-          <x>820</x>
-          <y>320</y>
-          <width>121</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <pointsize>19</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>ORDER!</string>
-        </property>
-       </widget>
-       <widget class="QWidget" name="layoutWidget">
-        <property name="geometry">
-         <rect>
-          <x>80</x>
-          <y>270</y>
-          <width>271</width>
-          <height>211</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_2">
-         <item>
-          <widget class="QRadioButton" name="radioButton_Regular">
-           <property name="font">
-            <font>
-             <pointsize>16</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Regular $500/month</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>16</width>
-             <height>16</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="radioButton_Premium">
-           <property name="font">
-            <font>
-             <pointsize>16</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Premium $1000/month</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="radioButton_Executive">
-           <property name="font">
-            <font>
-             <pointsize>16</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Executive $1200/month</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="layoutWidget">
-        <property name="geometry">
-         <rect>
-          <x>431</x>
-          <y>239</y>
-          <width>241</width>
-          <height>281</height>
-         </rect>
-        </property>
-        <layout class="QVBoxLayout" name="verticalLayout_8">
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_4">
-           <item>
-            <widget class="QLabel" name="label_Name">
-             <property name="font">
-              <font>
-               <pointsize>15</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Name</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="lineEdit_name"/>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_5">
-           <item>
-            <widget class="QLabel" name="label_Address">
-             <property name="font">
-              <font>
-               <pointsize>15</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Street Address</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="lineEdit_address"/>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_6">
-           <item>
-            <widget class="QLabel" name="label_ZipCode">
-             <property name="font">
-              <font>
-               <pointsize>15</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>Zip Code</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="spinBox_zipCode">
-             <property name="buttonSymbols">
-              <enum>QAbstractSpinBox::NoButtons</enum>
-             </property>
-             <property name="maximum">
-              <number>99999</number>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_7">
-           <item>
-            <widget class="QLabel" name="label_State">
-             <property name="font">
-              <font>
-               <pointsize>15</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>State</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QComboBox" name="comboBox_States">
-             <item>
-              <property name="text">
-               <string>AL</string>
+       <layout class="QVBoxLayout" name="verticalLayout_12">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_Pick_Package">
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Pick your package
+Enter your info</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_Regular">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Regular $500/month</string>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>16</width>
+            <height>16</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_Premium">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Premium $1000/month</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QRadioButton" name="radioButton_Executive">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Executive $1200/month</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_Name">
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+               </font>
               </property>
-             </item>
-             <item>
               <property name="text">
-               <string>AK</string>
+               <string>Name</string>
               </property>
-             </item>
-             <item>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_2"/>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_name"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_Address">
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
               <property name="text">
-               <string>AZ</string>
+               <string>Street Address</string>
               </property>
-             </item>
-             <item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_address"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QLabel" name="label_ZipCode">
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
               <property name="text">
-               <string>AR</string>
+               <string>Zip Code</string>
               </property>
-             </item>
-             <item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_zipCode">
+              <property name="buttonSymbols">
+               <enum>QAbstractSpinBox::NoButtons</enum>
+              </property>
+              <property name="maximum">
+               <number>99999</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_State">
+              <property name="font">
+               <font>
+                <pointsize>8</pointsize>
+               </font>
+              </property>
               <property name="text">
-               <string>CA</string>
+               <string>State</string>
               </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>CO</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>CT</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>DE</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>FL</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>GA</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>HI</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>ID</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>IL</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>IN</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>IA</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>KA</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>KY</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>LA</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>ME</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>MD</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>MA</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>MI</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>MN</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>MS</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>MO</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>MT</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>NE</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>NV</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>NH</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>NJ</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>NM</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>NY</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>NC</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>ND</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>OH</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>OK</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>OR</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>PA</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>RI</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>SC</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>SD</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>TN</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>TX</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>UT</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>VT</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>VA</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>WA</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>WV</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>WI</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>WY</string>
-              </property>
-             </item>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="layoutWidget">
-        <property name="geometry">
-         <rect>
-          <x>112</x>
-          <y>87</y>
-          <width>431</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="label_Pick_Package">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Pick your package</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="horizontalSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>40</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_Enter_Info">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>Enter your info</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="comboBox_States">
+              <item>
+               <property name="text">
+                <string>AL</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>AK</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>AZ</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>AR</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>CA</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>CO</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>CT</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>DE</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>FL</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>GA</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>HI</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>ID</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>IL</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>IN</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>IA</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>KA</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>KY</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>LA</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>ME</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>MD</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>MA</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>MI</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>MN</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>MS</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>MO</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>MT</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>NE</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>NV</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>NH</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>NJ</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>NM</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>NY</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>NC</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>ND</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>OH</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>OK</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>OR</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>PA</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>RI</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>SC</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>SD</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>TN</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>TX</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>UT</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>VT</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>VA</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>WA</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>WV</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>WI</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>WY</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButton_order">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>ORDER!</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
       <widget class="QWidget" name="helpTab">
        <attribute name="title">
         <string>Help</string>
        </attribute>
-       <widget class="QTextEdit" name="helpText">
-        <property name="geometry">
-         <rect>
-          <x>0</x>
-          <y>0</y>
-          <width>1031</width>
-          <height>621</height>
-         </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Plain</enum>
-        </property>
-        <property name="readOnly">
-         <bool>true</bool>
-        </property>
-       </widget>
-       <widget class="QTextEdit" name="contactText_2">
-        <property name="geometry">
-         <rect>
-          <x>400</x>
-          <y>500</y>
-          <width>181</width>
-          <height>91</height>
-         </rect>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
-        </property>
-        <property name="verticalScrollBarPolicy">
-         <enum>Qt::ScrollBarAlwaysOff</enum>
-        </property>
-        <property name="horizontalScrollBarPolicy">
-         <enum>Qt::ScrollBarAlwaysOff</enum>
-        </property>
-        <property name="readOnly">
-         <bool>true</bool>
-        </property>
-        <property name="html">
-         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QTextEdit" name="helpText">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="contactText_2">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -836,8 +659,10 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text'; font-size:13pt;&quot;&gt;iCyberSecurity@gmail.com&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'.SF NS Text'; font-size:13pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'.SF NS Text'; font-size:13pt;&quot;&gt;(949) 129 - 2339&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-       </widget>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -856,7 +681,4 @@ p, li { white-space: pre-wrap; }
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
  <connections/>
- <buttongroups>
-  <buttongroup name="buttonGroup"/>
- </buttongroups>
 </ui>

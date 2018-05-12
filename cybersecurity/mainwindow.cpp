@@ -8,11 +8,6 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    ui->testimonial1_text->setVisible(true);
-    ui->testimonial1_text->setReadOnly(true);
-    ui->testimonial2_text->setVisible(false);
-    ui->testimonial3_text->setVisible(false);
-
     ui->helpText->setText("To use iCyberSecurity, select the appropriate package and download the installer."
                       " After it has finished installing follow the installation wizard for the setup "
                       "proccess. Open the Application and select what you would like to protect and"
@@ -27,33 +22,17 @@ MainWindow::MainWindow(QWidget *parent) :
                              "naviagate to the help tab above. Please feal free to contact us using"
                              " any of the methods below! Thank you for your patronage.");
     ui->welcomeText->setReadOnly(true);
-}
-
-void MainWindow::on_firstTestimonial_clicked()
-{
-    ui->testimonial1_text->setVisible(true);
-    ui->testimonial1_text->setReadOnly(true);
-
-    ui->testimonial2_text->setVisible(false);
-    ui->testimonial3_text->setVisible(false);
-}
-
-void MainWindow::on_secondTestimonial_clicked()
-{
-    ui->testimonial2_text->setVisible(true);
-    ui->testimonial2_text->setReadOnly(true);
-
-    ui->testimonial1_text->setVisible(false);
-    ui->testimonial3_text->setVisible(false);
-}
-
-void MainWindow::on_thirdTestimonial_clicked()
-{
-    ui->testimonial3_text->setVisible(true);
-    ui->testimonial3_text->setReadOnly(true);
-
-    ui->testimonial1_text->setVisible(false);
-    ui->testimonial2_text->setVisible(false);
+    ui->guaranteeText->setText("Guarantee Policy:\n\nServices are guaranteed to protect from malware, "
+                               "spyware, viruses and hacking only when used properly. "
+                               "iCyberSecurity Inc. will not take responsibility for failure of the "
+                               "organization to follow through with proper security protocols. If there"
+                               " is a security breach, iCyberSecurity will reimbursed the client "
+                               "6 months’ fees and a gaggle of super fluffy pet bunnies. "
+                               "In addition iCyberSecurity will perform a clean sweep of the system "
+                               "and remove all malicious software and security breaches. In order to "
+                               "verify that the client adheres to the proper protocols, logs of "
+                               "computer usage, log-ins, uploads and downloads, web usage and emails "
+                               "will be kept.");
 }
 
 MainWindow::~MainWindow()

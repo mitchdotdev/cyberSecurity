@@ -1,3 +1,7 @@
+/** @file adminwindow.h
+ *  @brief The window in which an admin can log into and control information regarding customers
+ */
+
 #ifndef ADMINWINDOW_H
 #define ADMINWINDOW_H
 
@@ -32,6 +36,9 @@ signals:
 private:
     Ui::adminwindow *ui;
     CustomerModel *cModel;
+    ProxyModel *pModel;
+    CustomerModel *c2Model;
+    ProxyModel *p2Model;
     QString selectedName;
 
 };

@@ -1,3 +1,7 @@
+/** @file dbmanager.h
+ *  @brief class that allows for interactions with the database
+ */
+
 #ifndef DBMANAGER_H
 #define DBMANAGER_H
 
@@ -26,6 +30,7 @@ public:
     bool customerExists(Customer customer);
     QList<Customer> GetAllCustomers();
     Customer GetCustomer(QString companyName);
+    QList<Customer> GetKeyCustomers();
     bool VerifyLogin(credentials credentials);
 private:
 

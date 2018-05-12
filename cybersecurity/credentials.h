@@ -1,3 +1,7 @@
+/** @file credentials.h
+ *  @brief header file for the login credentials of an admin
+ */
+
 #ifndef CREDENTIALS_H
 #define CREDENTIALS_H
 

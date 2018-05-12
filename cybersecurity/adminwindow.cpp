@@ -6,18 +6,27 @@ adminwindow::adminwindow(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::adminwindow),
     cModel(new CustomerModel(DbManager::instance().GetAllCustomers())),
+    pModel(new ProxyModel),
+    c2Model(new CustomerModel(DbManager::instance().GetKeyCustomers())),
+    p2Model(new ProxyModel),
     selectedName("")
 {
     ui->setupUi(this);
-    ui->customerTable->setModel(cModel);
+    pModel->setSourceModel(cModel);
+    p2Model->setSourceModel(c2Model);
+    ui->customerTable->setModel(pModel);
+    ui->keyTable->setModel(p2Model);
     ui->customerTable->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->removeCustomer->setEnabled(false);
+    ui->customerTable->setSortingEnabled(true);
+    ui->keyTable->setSortingEnabled(true);
 }
 
 adminwindow::~adminwindow()
 {
     delete ui;
     delete cModel;
+    delete c2Model;
 }
 
 void adminwindow::removeCustomer()

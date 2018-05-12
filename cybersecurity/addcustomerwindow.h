@@ -1,3 +1,7 @@
+/** @file addcustomerwindow.h
+ * @brief Window where the admin can enter in the info of a new customer.
+ */
+
 #ifndef ADDCUSTOMERWINDOW_H
 #define ADDCUSTOMERWINDOW_H
 

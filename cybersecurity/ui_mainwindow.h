@@ -21,7 +21,6 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
@@ -36,39 +35,38 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QVBoxLayout *verticalLayout;
+    QVBoxLayout *verticalLayout_3;
     QTabWidget *tabWidget;
     QWidget *welcomeTab;
+    QVBoxLayout *verticalLayout;
     QTextEdit *welcomeText;
-    QLineEdit *userEdit;
-    QLineEdit *passEdit;
     QLabel *label_3;
+    QLineEdit *userEdit;
     QLabel *label_4;
-    QPushButton *loginButton;
+    QLineEdit *passEdit;
     QLabel *loginStatus;
+    QPushButton *loginButton;
     QWidget *packageTab;
+    QVBoxLayout *verticalLayout_10;
     QLabel *label;
-    QLabel *label_2;
+    QTextEdit *guaranteeText;
     QWidget *reviewsTab;
-    QTextEdit *testimonial1_text;
-    QWidget *layoutWidget;
-    QHBoxLayout *horizontalLayout;
-    QRadioButton *firstTestimonial;
-    QRadioButton *secondTestimonial;
-    QRadioButton *thirdTestimonial;
-    QTextEdit *testimonial2_text;
+    QVBoxLayout *verticalLayout_11;
     QTextEdit *testimonial3_text;
+    QTextEdit *testimonial2_text;
+    QTextEdit *testimonial1_text;
+    QHBoxLayout *horizontalLayout;
     QWidget *tab;
-    QPushButton *pushButton_order;
-    QWidget *layoutWidget1;
-    QVBoxLayout *verticalLayout_2;
+    QVBoxLayout *verticalLayout_12;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *label_Pick_Package;
     QRadioButton *radioButton_Regular;
     QRadioButton *radioButton_Premium;
     QRadioButton *radioButton_Executive;
-    QWidget *layoutWidget2;
     QVBoxLayout *verticalLayout_8;
     QVBoxLayout *verticalLayout_4;
     QLabel *label_Name;
+    QVBoxLayout *verticalLayout_2;
     QLineEdit *lineEdit_name;
     QVBoxLayout *verticalLayout_5;
     QLabel *label_Address;
@@ -79,177 +77,188 @@ public:
     QVBoxLayout *verticalLayout_7;
     QLabel *label_State;
     QComboBox *comboBox_States;
-    QWidget *layoutWidget3;
-    QHBoxLayout *horizontalLayout_2;
-    QLabel *label_Pick_Package;
-    QSpacerItem *horizontalSpacer;
-    QLabel *label_Enter_Info;
+    QPushButton *pushButton_order;
     QWidget *helpTab;
+    QVBoxLayout *verticalLayout_9;
     QTextEdit *helpText;
     QTextEdit *contactText_2;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
-    QButtonGroup *buttonGroup;
 
     void setupUi(QMainWindow *MainWindow)
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1053, 710);
+        MainWindow->resize(438, 382);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        verticalLayout = new QVBoxLayout(centralWidget);
-        verticalLayout->setSpacing(6);
-        verticalLayout->setContentsMargins(11, 11, 11, 11);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout_3 = new QVBoxLayout(centralWidget);
+        verticalLayout_3->setSpacing(6);
+        verticalLayout_3->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
         tabWidget = new QTabWidget(centralWidget);
         tabWidget->setObjectName(QStringLiteral("tabWidget"));
         welcomeTab = new QWidget();
         welcomeTab->setObjectName(QStringLiteral("welcomeTab"));
+        verticalLayout = new QVBoxLayout(welcomeTab);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         welcomeText = new QTextEdit(welcomeTab);
         welcomeText->setObjectName(QStringLiteral("welcomeText"));
-        welcomeText->setGeometry(QRect(0, 0, 1031, 461));
-        userEdit = new QLineEdit(welcomeTab);
-        userEdit->setObjectName(QStringLiteral("userEdit"));
-        userEdit->setGeometry(QRect(210, 550, 113, 20));
-        passEdit = new QLineEdit(welcomeTab);
-        passEdit->setObjectName(QStringLiteral("passEdit"));
-        passEdit->setGeometry(QRect(210, 580, 113, 20));
+        welcomeText->setFrameShape(QFrame::NoFrame);
+
+        verticalLayout->addWidget(welcomeText);
+
         label_3 = new QLabel(welcomeTab);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(160, 550, 35, 10));
+
+        verticalLayout->addWidget(label_3);
+
+        userEdit = new QLineEdit(welcomeTab);
+        userEdit->setObjectName(QStringLiteral("userEdit"));
+
+        verticalLayout->addWidget(userEdit);
+
         label_4 = new QLabel(welcomeTab);
         label_4->setObjectName(QStringLiteral("label_4"));
-        label_4->setGeometry(QRect(160, 590, 35, 10));
-        loginButton = new QPushButton(welcomeTab);
-        loginButton->setObjectName(QStringLiteral("loginButton"));
-        loginButton->setGeometry(QRect(230, 620, 80, 16));
+
+        verticalLayout->addWidget(label_4);
+
+        passEdit = new QLineEdit(welcomeTab);
+        passEdit->setObjectName(QStringLiteral("passEdit"));
+
+        verticalLayout->addWidget(passEdit);
+
         loginStatus = new QLabel(welcomeTab);
         loginStatus->setObjectName(QStringLiteral("loginStatus"));
-        loginStatus->setGeometry(QRect(250, 610, 35, 10));
+
+        verticalLayout->addWidget(loginStatus);
+
+        loginButton = new QPushButton(welcomeTab);
+        loginButton->setObjectName(QStringLiteral("loginButton"));
+
+        verticalLayout->addWidget(loginButton);
+
         tabWidget->addTab(welcomeTab, QString());
         packageTab = new QWidget();
         packageTab->setObjectName(QStringLiteral("packageTab"));
+        verticalLayout_10 = new QVBoxLayout(packageTab);
+        verticalLayout_10->setSpacing(6);
+        verticalLayout_10->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_10->setObjectName(QStringLiteral("verticalLayout_10"));
         label = new QLabel(packageTab);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(40, 10, 711, 351));
-        label_2 = new QLabel(packageTab);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(10, 420, 1021, 191));
+
+        verticalLayout_10->addWidget(label);
+
+        guaranteeText = new QTextEdit(packageTab);
+        guaranteeText->setObjectName(QStringLiteral("guaranteeText"));
+        guaranteeText->setFrameShape(QFrame::NoFrame);
+        guaranteeText->setReadOnly(true);
+
+        verticalLayout_10->addWidget(guaranteeText);
+
         tabWidget->addTab(packageTab, QString());
         reviewsTab = new QWidget();
         reviewsTab->setObjectName(QStringLiteral("reviewsTab"));
-        testimonial1_text = new QTextEdit(reviewsTab);
-        testimonial1_text->setObjectName(QStringLiteral("testimonial1_text"));
-        testimonial1_text->setGeometry(QRect(240, 100, 541, 131));
-        testimonial1_text->setFrameShape(QFrame::NoFrame);
-        testimonial1_text->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        testimonial1_text->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        layoutWidget = new QWidget(reviewsTab);
-        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(340, 460, 361, 21));
-        horizontalLayout = new QHBoxLayout(layoutWidget);
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        firstTestimonial = new QRadioButton(layoutWidget);
-        buttonGroup = new QButtonGroup(MainWindow);
-        buttonGroup->setObjectName(QStringLiteral("buttonGroup"));
-        buttonGroup->addButton(firstTestimonial);
-        firstTestimonial->setObjectName(QStringLiteral("firstTestimonial"));
-
-        horizontalLayout->addWidget(firstTestimonial);
-
-        secondTestimonial = new QRadioButton(layoutWidget);
-        buttonGroup->addButton(secondTestimonial);
-        secondTestimonial->setObjectName(QStringLiteral("secondTestimonial"));
-
-        horizontalLayout->addWidget(secondTestimonial);
-
-        thirdTestimonial = new QRadioButton(layoutWidget);
-        buttonGroup->addButton(thirdTestimonial);
-        thirdTestimonial->setObjectName(QStringLiteral("thirdTestimonial"));
-
-        horizontalLayout->addWidget(thirdTestimonial);
-
-        secondTestimonial->raise();
-        firstTestimonial->raise();
-        thirdTestimonial->raise();
-        testimonial2_text = new QTextEdit(reviewsTab);
-        testimonial2_text->setObjectName(QStringLiteral("testimonial2_text"));
-        testimonial2_text->setGeometry(QRect(280, 100, 461, 181));
-        testimonial2_text->setFrameShape(QFrame::NoFrame);
-        testimonial2_text->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        testimonial2_text->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        verticalLayout_11 = new QVBoxLayout(reviewsTab);
+        verticalLayout_11->setSpacing(6);
+        verticalLayout_11->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_11->setObjectName(QStringLiteral("verticalLayout_11"));
         testimonial3_text = new QTextEdit(reviewsTab);
         testimonial3_text->setObjectName(QStringLiteral("testimonial3_text"));
-        testimonial3_text->setGeometry(QRect(270, 100, 461, 181));
         testimonial3_text->setFrameShape(QFrame::NoFrame);
         testimonial3_text->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         testimonial3_text->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+        verticalLayout_11->addWidget(testimonial3_text);
+
+        testimonial2_text = new QTextEdit(reviewsTab);
+        testimonial2_text->setObjectName(QStringLiteral("testimonial2_text"));
+        testimonial2_text->setFrameShape(QFrame::NoFrame);
+        testimonial2_text->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        testimonial2_text->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+        verticalLayout_11->addWidget(testimonial2_text);
+
+        testimonial1_text = new QTextEdit(reviewsTab);
+        testimonial1_text->setObjectName(QStringLiteral("testimonial1_text"));
+        testimonial1_text->setFrameShape(QFrame::NoFrame);
+        testimonial1_text->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        testimonial1_text->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+        verticalLayout_11->addWidget(testimonial1_text);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+
+        verticalLayout_11->addLayout(horizontalLayout);
+
         tabWidget->addTab(reviewsTab, QString());
-        layoutWidget->raise();
         testimonial1_text->raise();
         testimonial2_text->raise();
         testimonial3_text->raise();
         tab = new QWidget();
         tab->setObjectName(QStringLiteral("tab"));
-        pushButton_order = new QPushButton(tab);
-        pushButton_order->setObjectName(QStringLiteral("pushButton_order"));
-        pushButton_order->setGeometry(QRect(820, 320, 121, 31));
+        verticalLayout_12 = new QVBoxLayout(tab);
+        verticalLayout_12->setSpacing(6);
+        verticalLayout_12->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_12->setObjectName(QStringLiteral("verticalLayout_12"));
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        label_Pick_Package = new QLabel(tab);
+        label_Pick_Package->setObjectName(QStringLiteral("label_Pick_Package"));
         QFont font;
-        font.setPointSize(19);
-        pushButton_order->setFont(font);
-        layoutWidget1 = new QWidget(tab);
-        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
-        layoutWidget1->setGeometry(QRect(80, 270, 271, 211));
-        verticalLayout_2 = new QVBoxLayout(layoutWidget1);
-        verticalLayout_2->setSpacing(6);
-        verticalLayout_2->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        verticalLayout_2->setContentsMargins(0, 0, 0, 0);
-        radioButton_Regular = new QRadioButton(layoutWidget1);
+        font.setPointSize(8);
+        label_Pick_Package->setFont(font);
+        label_Pick_Package->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_2->addWidget(label_Pick_Package);
+
+
+        verticalLayout_12->addLayout(horizontalLayout_2);
+
+        radioButton_Regular = new QRadioButton(tab);
         radioButton_Regular->setObjectName(QStringLiteral("radioButton_Regular"));
-        QFont font1;
-        font1.setPointSize(16);
-        radioButton_Regular->setFont(font1);
+        radioButton_Regular->setFont(font);
         radioButton_Regular->setIconSize(QSize(16, 16));
 
-        verticalLayout_2->addWidget(radioButton_Regular);
+        verticalLayout_12->addWidget(radioButton_Regular);
 
-        radioButton_Premium = new QRadioButton(layoutWidget1);
+        radioButton_Premium = new QRadioButton(tab);
         radioButton_Premium->setObjectName(QStringLiteral("radioButton_Premium"));
-        radioButton_Premium->setFont(font1);
+        radioButton_Premium->setFont(font);
 
-        verticalLayout_2->addWidget(radioButton_Premium);
+        verticalLayout_12->addWidget(radioButton_Premium);
 
-        radioButton_Executive = new QRadioButton(layoutWidget1);
+        radioButton_Executive = new QRadioButton(tab);
         radioButton_Executive->setObjectName(QStringLiteral("radioButton_Executive"));
-        radioButton_Executive->setFont(font1);
+        radioButton_Executive->setFont(font);
 
-        verticalLayout_2->addWidget(radioButton_Executive);
+        verticalLayout_12->addWidget(radioButton_Executive);
 
-        layoutWidget2 = new QWidget(tab);
-        layoutWidget2->setObjectName(QStringLiteral("layoutWidget2"));
-        layoutWidget2->setGeometry(QRect(431, 239, 241, 281));
-        verticalLayout_8 = new QVBoxLayout(layoutWidget2);
+        verticalLayout_8 = new QVBoxLayout();
         verticalLayout_8->setSpacing(6);
-        verticalLayout_8->setContentsMargins(11, 11, 11, 11);
         verticalLayout_8->setObjectName(QStringLiteral("verticalLayout_8"));
-        verticalLayout_8->setContentsMargins(0, 0, 0, 0);
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setSpacing(6);
         verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
-        label_Name = new QLabel(layoutWidget2);
+        label_Name = new QLabel(tab);
         label_Name->setObjectName(QStringLiteral("label_Name"));
-        QFont font2;
-        font2.setPointSize(15);
-        label_Name->setFont(font2);
+        label_Name->setFont(font);
 
         verticalLayout_4->addWidget(label_Name);
 
-        lineEdit_name = new QLineEdit(layoutWidget2);
+        verticalLayout_2 = new QVBoxLayout();
+        verticalLayout_2->setSpacing(6);
+        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+
+        verticalLayout_4->addLayout(verticalLayout_2);
+
+        lineEdit_name = new QLineEdit(tab);
         lineEdit_name->setObjectName(QStringLiteral("lineEdit_name"));
 
         verticalLayout_4->addWidget(lineEdit_name);
@@ -260,13 +269,13 @@ public:
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setSpacing(6);
         verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
-        label_Address = new QLabel(layoutWidget2);
+        label_Address = new QLabel(tab);
         label_Address->setObjectName(QStringLiteral("label_Address"));
-        label_Address->setFont(font2);
+        label_Address->setFont(font);
 
         verticalLayout_5->addWidget(label_Address);
 
-        lineEdit_address = new QLineEdit(layoutWidget2);
+        lineEdit_address = new QLineEdit(tab);
         lineEdit_address->setObjectName(QStringLiteral("lineEdit_address"));
 
         verticalLayout_5->addWidget(lineEdit_address);
@@ -277,13 +286,13 @@ public:
         verticalLayout_6 = new QVBoxLayout();
         verticalLayout_6->setSpacing(6);
         verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
-        label_ZipCode = new QLabel(layoutWidget2);
+        label_ZipCode = new QLabel(tab);
         label_ZipCode->setObjectName(QStringLiteral("label_ZipCode"));
-        label_ZipCode->setFont(font2);
+        label_ZipCode->setFont(font);
 
         verticalLayout_6->addWidget(label_ZipCode);
 
-        spinBox_zipCode = new QSpinBox(layoutWidget2);
+        spinBox_zipCode = new QSpinBox(tab);
         spinBox_zipCode->setObjectName(QStringLiteral("spinBox_zipCode"));
         spinBox_zipCode->setButtonSymbols(QAbstractSpinBox::NoButtons);
         spinBox_zipCode->setMaximum(99999);
@@ -296,13 +305,13 @@ public:
         verticalLayout_7 = new QVBoxLayout();
         verticalLayout_7->setSpacing(6);
         verticalLayout_7->setObjectName(QStringLiteral("verticalLayout_7"));
-        label_State = new QLabel(layoutWidget2);
+        label_State = new QLabel(tab);
         label_State->setObjectName(QStringLiteral("label_State"));
-        label_State->setFont(font2);
+        label_State->setFont(font);
 
         verticalLayout_7->addWidget(label_State);
 
-        comboBox_States = new QComboBox(layoutWidget2);
+        comboBox_States = new QComboBox(tab);
         comboBox_States->addItem(QString());
         comboBox_States->addItem(QString());
         comboBox_States->addItem(QString());
@@ -360,51 +369,42 @@ public:
 
         verticalLayout_8->addLayout(verticalLayout_7);
 
-        layoutWidget3 = new QWidget(tab);
-        layoutWidget3->setObjectName(QStringLiteral("layoutWidget3"));
-        layoutWidget3->setGeometry(QRect(112, 87, 431, 22));
-        horizontalLayout_2 = new QHBoxLayout(layoutWidget3);
-        horizontalLayout_2->setSpacing(6);
-        horizontalLayout_2->setContentsMargins(11, 11, 11, 11);
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
-        label_Pick_Package = new QLabel(layoutWidget3);
-        label_Pick_Package->setObjectName(QStringLiteral("label_Pick_Package"));
-        label_Pick_Package->setFont(font2);
-        label_Pick_Package->setAlignment(Qt::AlignCenter);
 
-        horizontalLayout_2->addWidget(label_Pick_Package);
+        verticalLayout_12->addLayout(verticalLayout_8);
 
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        pushButton_order = new QPushButton(tab);
+        pushButton_order->setObjectName(QStringLiteral("pushButton_order"));
+        pushButton_order->setFont(font);
 
-        horizontalLayout_2->addItem(horizontalSpacer);
-
-        label_Enter_Info = new QLabel(layoutWidget3);
-        label_Enter_Info->setObjectName(QStringLiteral("label_Enter_Info"));
-        label_Enter_Info->setFont(font2);
-        label_Enter_Info->setAlignment(Qt::AlignCenter);
-
-        horizontalLayout_2->addWidget(label_Enter_Info);
+        verticalLayout_12->addWidget(pushButton_order);
 
         tabWidget->addTab(tab, QString());
         helpTab = new QWidget();
         helpTab->setObjectName(QStringLiteral("helpTab"));
+        verticalLayout_9 = new QVBoxLayout(helpTab);
+        verticalLayout_9->setSpacing(6);
+        verticalLayout_9->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_9->setObjectName(QStringLiteral("verticalLayout_9"));
         helpText = new QTextEdit(helpTab);
         helpText->setObjectName(QStringLiteral("helpText"));
-        helpText->setGeometry(QRect(0, 0, 1031, 621));
         helpText->setFrameShape(QFrame::NoFrame);
         helpText->setFrameShadow(QFrame::Plain);
         helpText->setReadOnly(true);
+
+        verticalLayout_9->addWidget(helpText);
+
         contactText_2 = new QTextEdit(helpTab);
         contactText_2->setObjectName(QStringLiteral("contactText_2"));
-        contactText_2->setGeometry(QRect(400, 500, 181, 91));
         contactText_2->setFrameShape(QFrame::NoFrame);
         contactText_2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         contactText_2->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         contactText_2->setReadOnly(true);
+
+        verticalLayout_9->addWidget(contactText_2);
+
         tabWidget->addTab(helpTab, QString());
 
-        verticalLayout->addWidget(tabWidget);
+        verticalLayout_3->addWidget(tabWidget);
 
         MainWindow->setCentralWidget(centralWidget);
         mainToolBar = new QToolBar(MainWindow);
@@ -427,10 +427,12 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "iCyberSecurity", nullptr));
         label_3->setText(QApplication::translate("MainWindow", "Username", nullptr));
         label_4->setText(QApplication::translate("MainWindow", "Password", nullptr));
-        loginButton->setText(QApplication::translate("MainWindow", "Login", nullptr));
         loginStatus->setText(QString());
+        loginButton->setText(QApplication::translate("MainWindow", "Login", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(welcomeTab), QApplication::translate("MainWindow", "Welcome", nullptr));
-        label->setText(QApplication::translate("MainWindow", "Regular - $500/month\n"
+        label->setText(QApplication::translate("MainWindow", "\n"
+"\n"
+"Regular - $500/month\n"
 "	\342\200\242  Ensures that all passwords follow our security protocols.\n"
 "	\342\200\242  Passes all traffic through out secure servers.\n"
 "	\342\200\242  Scans all incoming emails and downloads for malware.\n"
@@ -447,50 +449,41 @@ public:
 "\n"
 "Executive - $1200/month\n"
 "	\342\200\242  Provides a dongle with encrypted passwords that changes every 10 minutes\n"
-"	\342\200\242  Passes "
-                        "all traffic through out secure servers.\n"
+"	\342\200\242"
+                        "  Passes all traffic through out secure servers.\n"
 "	\342\200\242  Runs hourly security checks and scans.\n"
 "	\342\200\242  Scans all incoming emails and downloads for malware.\n"
 "	\342\200\242  Implements a secure mode if there are any security breaches\n"
 "	\342\200\242  Maintenance and upgrades against the latest security threats every month\n"
 "", nullptr));
-        label_2->setText(QApplication::translate("MainWindow", "Guarantee Policy:\n"
-"\n"
-"      Services are guaranteed to protect from malware, spyware, viruses and hacking only when used properly. iCyberSecurity Inc. will not take responsibility for failure of\n"
-"the organization to follow through with proper security protocols. If there is a security breach, iCyberSecurity will reimbursed the client 6 months\342\200\231 fees and a gaggle\n"
-"of super fluffy pet bunnies. In addition iCyberSecurity will perform a clean sweep of the system and remove all malicious software and security breaches. In order to\n"
-"verify that the client adheres to the proper protocols, logs of computer usage, log-ins, uploads and downloads, web usage and emails will be kept.\n"
-"", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(packageTab), QApplication::translate("MainWindow", "Packages", nullptr));
-        testimonial1_text->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text'; font-size:24pt;\">&quot;iCyberSecurity has helped my small business stay safe from all kinds of cyber threats for 10+ years!&quot;</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text'; font-size:24pt;\"> - Jeff Bezos</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:"
-                        "0px;\"><span style=\" font-family:'.SF NS Text'; font-size:24pt;\"> (founder of some company called Amazon)</span></p></body></html>", nullptr));
-        firstTestimonial->setText(QString());
-        secondTestimonial->setText(QString());
-        thirdTestimonial->setText(QString());
-        testimonial2_text->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text'; font-size:24pt;\">&quot;Although we started as a small business, iCyberSecurity has provided top notch cyber security as we have scaled throughout the years!&quot;</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text'; font-size:24pt;\"> - Elon Musk</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; "
-                        "-qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text'; font-size:24pt;\"> (founder of Tesla)</span></p></body></html>", nullptr));
         testimonial3_text->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text'; font-size:24pt;\">&quot;Being a tech company security is of the utmost importance. iCyberSecurity has consistently been a step ahead and has protected us from potential cyber threats!&quot;</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text'; font-size:24pt;\"> - Mark Zuckerberg</span></p>\n"
-"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; mar"
-                        "gin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text'; font-size:24pt;\"> (founder of Facebook)</span></p></body></html>", nullptr));
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text';\">&quot;Being a tech company security is of the utmost importance. iCyberSecurity has consistently been a step ahead and has protected us from potential cyber threats!&quot;</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text';\"> - Mark Zuckerberg</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; "
+                        "-qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text';\"> (founder of Facebook)</span></p></body></html>", nullptr));
+        testimonial2_text->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text';\">&quot;Although we started as a small business, iCyberSecurity has provided top notch cyber security as we have scaled throughout the years!&quot;</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text';\"> - Elon Musk</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:"
+                        "0px;\"><span style=\" font-family:'.SF NS Text';\"> (founder of Tesla)</span></p></body></html>", nullptr));
+        testimonial1_text->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;\">\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text';\">&quot;iCyberSecurity has helped my small business stay safe from all kinds of cyber threats for 10+ years!&quot;</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'.SF NS Text';\"> - Jeff Bezos</span></p>\n"
+"<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-famil"
+                        "y:'.SF NS Text';\"> (founder of some company called Amazon)</span></p></body></html>", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(reviewsTab), QApplication::translate("MainWindow", "Reviews", nullptr));
-        pushButton_order->setText(QApplication::translate("MainWindow", "ORDER!", nullptr));
+        label_Pick_Package->setText(QApplication::translate("MainWindow", "Pick your package\n"
+"Enter your info", nullptr));
         radioButton_Regular->setText(QApplication::translate("MainWindow", "Regular $500/month", nullptr));
         radioButton_Premium->setText(QApplication::translate("MainWindow", "Premium $1000/month", nullptr));
         radioButton_Executive->setText(QApplication::translate("MainWindow", "Executive $1200/month", nullptr));
@@ -549,8 +542,7 @@ public:
         comboBox_States->setItemText(48, QApplication::translate("MainWindow", "WI", nullptr));
         comboBox_States->setItemText(49, QApplication::translate("MainWindow", "WY", nullptr));
 
-        label_Pick_Package->setText(QApplication::translate("MainWindow", "Pick your package", nullptr));
-        label_Enter_Info->setText(QApplication::translate("MainWindow", "Enter your info", nullptr));
+        pushButton_order->setText(QApplication::translate("MainWindow", "ORDER!", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Order", nullptr));
         contactText_2->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"

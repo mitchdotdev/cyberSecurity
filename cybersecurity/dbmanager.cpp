@@ -189,6 +189,64 @@ QList<Customer> DbManager::GetAllCustomers()
     return customerList;
 }
 
+QList<Customer> DbManager::GetKeyCustomers()
+{
+    QList<Customer> customerList;
+    QString name;
+    QString street;
+    QString city;
+    QString state;
+    int zipcode;
+    QString interest;
+    QString value;
+
+    int nameIndex;
+    int streetIndex;
+    int cityIndex;
+    int stateIndex;
+    int zipcodeIndex;
+    int interestIndex;
+    int valueIndex;
+
+    QSqlQuery query;
+
+    query.prepare("SELECT name, street, city, state, zipcode, interest, value FROM companies");
+
+    if(query.exec())
+    {
+        nameIndex = query.record().indexOf("name");
+        streetIndex = query.record().indexOf("street");
+        cityIndex = query.record().indexOf("city");
+        stateIndex = query.record().indexOf("state");
+        zipcodeIndex = query.record().indexOf("zipcode");
+        interestIndex = query.record().indexOf("interest");
+        valueIndex = query.record().indexOf("value");
+
+        while(query.next())
+        {
+            value = query.value(valueIndex).toString();
+            if(value == "key")
+            {
+                name = query.value(nameIndex).toString();
+                street = query.value(streetIndex).toString();
+                city = query.value(cityIndex).toString();
+                state = query.value(stateIndex).toString();
+                zipcode = query.value(zipcodeIndex). toInt();
+                interest = query.value(interestIndex).toString();
+
+
+                customerList.append(Customer(name, street, city, state, zipcode, interest, value));
+            }
+        }
+    }
+    else
+    {
+        qDebug() << "Error getting customers: " << query.lastError();
+    }
+
+    return customerList;
+}
+
 Customer DbManager::GetCustomer(QString companyName)
 {
     QSqlQuery query;

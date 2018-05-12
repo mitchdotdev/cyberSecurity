@@ -108,3 +108,15 @@ QVariant CustomerModel::headerData(int section, Qt::Orientation orientation, int
     }
     return QVariant();
 }
+
+ProxyModel::ProxyModel(QObject *parent): QSortFilterProxyModel(parent),
+    cName(""), cStreet(""), cCity(""), cState(""), cZipcode(0),
+    cInterest(""), cValue("")
+{
+
+}
+
+QVariant ProxyModel::headerData(int section, Qt::Orientation orientation, int role) const
+{
+    return sourceModel()->headerData(section, orientation, role);
+}

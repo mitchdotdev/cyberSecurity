@@ -1,3 +1,7 @@
+/** @file mainwindow.h
+ *  @brief main window in which there are multiple tabs including: welcome, packages, reviews, help, and order
+ */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -19,11 +23,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_firstTestimonial_clicked();
-
-    void on_secondTestimonial_clicked();
-
-    void on_thirdTestimonial_clicked();
 
     void on_pushButton_order_clicked();
 

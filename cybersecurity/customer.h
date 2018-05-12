@@ -1,3 +1,7 @@
+/** @file customer.h
+ *  @brief allows for the making of a customer object holding all customer information
+ */
+
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
