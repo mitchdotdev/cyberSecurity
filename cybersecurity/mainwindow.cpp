@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "adminwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -75,5 +76,21 @@ void MainWindow::on_pushButton_order_clicked()
         ui->lineEdit_name->clear();
         ui->lineEdit_address->clear();
         ui->spinBox_zipCode->clear();
+    }
+}
+
+void MainWindow::on_loginButton_clicked()
+{
+    adminwindow addWin;
+
+    if(DbManager::instance().VerifyLogin(credentials(ui->userEdit->text(), ui->passEdit->text())))
+    {
+        ui->loginStatus->setText("Login Accepted");
+        addWin.setModal(true);
+        addWin.exec();
+    }
+    else
+    {
+        ui->loginStatus->setText("Invalid username or password");
     }
 }

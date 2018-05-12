@@ -26,14 +26,29 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    dbmanager.cpp
+    dbmanager.cpp \
+    adminwindow.cpp \
+    addcustomerwindow.cpp \
+    customer.cpp \
+    models.cpp \
+    confirmremoval.cpp \
+    credentials.cpp
 
 HEADERS += \
         mainwindow.h \
-    dbmanager.h
+    dbmanager.h \
+    adminwindow.h \
+    addcustomerwindow.h \
+    customer.h \
+    models.h \
+    confirmremoval.h \
+    credentials.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    adminwindow.ui \
+    addcustomerwindow.ui \
+    confirmremoval.ui
 
 RESOURCES += \
     images.qrc
