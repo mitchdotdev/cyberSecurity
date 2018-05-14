@@ -17,6 +17,7 @@ adminwindow::adminwindow(QWidget *parent) :
     ui->customerTable->setModel(pModel);
     ui->keyTable->setModel(p2Model);
     ui->customerTable->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->customerTable->setEditTriggers(QAbstractItemView::DoubleClicked);
     ui->removeCustomer->setEnabled(false);
     ui->customerTable->setSortingEnabled(true);
     ui->keyTable->setSortingEnabled(true);

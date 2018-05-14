@@ -28,8 +28,6 @@ private slots:
     void removeCustomer();
     void on_customerTable_clicked(const QModelIndex &index);
     void on_removeCustomer_clicked();
-
-
 signals:
     void SendModel(CustomerModel *mod);
 
