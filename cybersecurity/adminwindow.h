@@ -30,6 +30,8 @@ private slots:
     void on_removeCustomer_clicked();
 
 
+    void on_transButton_clicked();
+
 signals:
     void SendModel(CustomerModel *mod);
 
@@ -39,6 +41,8 @@ private:
     ProxyModel *pModel;
     CustomerModel *c2Model;
     ProxyModel *p2Model;
+    TransactionModel *tModel;
+    ProxyModel *p3Model;
     QString selectedName;
 
 };

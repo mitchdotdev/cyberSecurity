@@ -9,17 +9,23 @@ adminwindow::adminwindow(QWidget *parent) :
     pModel(new ProxyModel),
     c2Model(new CustomerModel(DbManager::instance().GetKeyCustomers())),
     p2Model(new ProxyModel),
+    tModel(new TransactionModel(DbManager::instance().GetTransactions())),
+    p3Model(new ProxyModel),
+
     selectedName("")
 {
     ui->setupUi(this);
     pModel->setSourceModel(cModel);
     p2Model->setSourceModel(c2Model);
+    p3Model->setSourceModel(tModel);
     ui->customerTable->setModel(pModel);
     ui->keyTable->setModel(p2Model);
+    ui->transTable->setModel(p3Model);
     ui->customerTable->setSelectionBehavior(QAbstractItemView::SelectRows);
     ui->removeCustomer->setEnabled(false);
     ui->customerTable->setSortingEnabled(true);
     ui->keyTable->setSortingEnabled(true);
+    ui->transTable->setSortingEnabled(true);
 }
 
 adminwindow::~adminwindow()
@@ -90,4 +96,9 @@ void adminwindow::updateCustomerView()
 {
     qDebug() << "Received signal, updating customer view";
     cModel->setList(DbManager::instance().GetAllCustomers());
+}
+
+void adminwindow::on_transButton_clicked()
+{
+    DbManager::instance().GetTransactions();
 }

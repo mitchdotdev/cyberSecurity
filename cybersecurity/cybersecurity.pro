@@ -32,7 +32,8 @@ SOURCES += \
     customer.cpp \
     models.cpp \
     confirmremoval.cpp \
-    credentials.cpp
+    credentials.cpp \
+    transaction.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -42,7 +43,8 @@ HEADERS += \
     customer.h \
     models.h \
     confirmremoval.h \
-    credentials.h
+    credentials.h \
+    transaction.h
 
 FORMS += \
         mainwindow.ui \

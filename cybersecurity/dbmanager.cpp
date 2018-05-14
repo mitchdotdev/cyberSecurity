@@ -326,3 +326,71 @@ bool DbManager::VerifyLogin(credentials credentials)
 
     return success;
 }
+
+bool DbManager::addTransaction(transaction trans)
+{
+    bool success;
+    QString package;
+    QString name;
+    double price;
+    QSqlQuery query;
+
+    success = false;
+    package = trans.GetPackage();
+    name = trans.GetName();
+    price = trans.GetPrice();
+
+    query.prepare("INSERT INTO transactions (package, price, customer_name) VALUES"
+                  "(:iPackage, :iPrice, :iName)");
+    query.bindValue(":iPackage", package);
+    query.bindValue(":iPrice", price);
+    query.bindValue(":iName", name);
+
+    if(query.exec())
+    {
+        success = true;
+    }
+    else
+    {
+        qDebug() << "addTransaction error: " << query.lastError();
+    }
+
+    return success;
+}
+
+QList<transaction> DbManager::GetTransactions()
+{
+    QList<transaction> trans;
+    QSqlQuery query;
+    int packageIndex;
+    int nameIndex;
+    int priceIndex;
+    QString package;
+    QString name;
+    double price;
+
+    query.prepare("SELECT package, price, customer_name FROM transactions");
+
+    if(query.exec())
+    {
+        packageIndex = query.record().indexOf("package");
+        nameIndex = query.record().indexOf("customer_name");
+        priceIndex = query.record().indexOf("price");
+
+        while(query.next())
+        {
+            package = query.value(packageIndex).toString();
+            name = query.value(nameIndex).toString();
+            price = query.value(priceIndex).toDouble();
+
+            trans.append(transaction(package, name, price));
+        }
+    }
+    else
+    {
+        qDebug() << "Get Transactions Error: " << query.lastError();
+    }
+
+    return trans;
+
+}

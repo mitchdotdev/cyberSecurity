@@ -111,7 +111,7 @@ QVariant CustomerModel::headerData(int section, Qt::Orientation orientation, int
 
 ProxyModel::ProxyModel(QObject *parent): QSortFilterProxyModel(parent),
     cName(""), cStreet(""), cCity(""), cState(""), cZipcode(0),
-    cInterest(""), cValue("")
+    cInterest(""), cValue(""), cPackage(""), cPrice(0.0)
 {
 
 }
@@ -119,4 +119,88 @@ ProxyModel::ProxyModel(QObject *parent): QSortFilterProxyModel(parent),
 QVariant ProxyModel::headerData(int section, Qt::Orientation orientation, int role) const
 {
     return sourceModel()->headerData(section, orientation, role);
+}
+
+TransactionModel::TransactionModel(QList<transaction> transList, QObject *parent):
+    QAbstractTableModel(parent)
+{
+    modTransactionList = transList;
+}
+
+void TransactionModel::setList(const QList<transaction> transList)
+{
+    beginResetModel();
+    modTransactionList = transList;
+    endResetModel();
+}
+
+int TransactionModel::rowCount(const QModelIndex &parent) const
+{
+    Q_UNUSED(parent);
+    return modTransactionList.length();
+}
+
+int TransactionModel::columnCount(const QModelIndex &parent) const
+{
+    Q_UNUSED(parent);
+    return 3;
+}
+
+QVariant TransactionModel::data(const QModelIndex &index, int role) const
+{
+    if(!index.isValid())
+    {
+        return QVariant();
+    }
+    if(index.row() >= modTransactionList.size() || index.row() < 0)
+    {
+        return QVariant();
+    }
+
+    if(role == Qt::DisplayRole)
+    {
+        transaction transaction = modTransactionList.at(index.row());
+
+        switch(index.column())
+        {
+        case 0:
+            return transaction.GetName();
+            break;
+        case 1:
+            return transaction.GetPackage();
+            break;
+        case 2:
+            return transaction.GetPrice();
+            break;
+        default:
+            return QVariant();
+            break;
+        }
+    }
+    return QVariant();
+}
+
+QVariant TransactionModel::headerData(int section, Qt::Orientation orientation, int role) const
+{
+    if(role != Qt::DisplayRole)
+    {
+        return QVariant();
+    }
+
+    if(orientation == Qt::Horizontal)
+    {
+        switch(section)
+        {
+        case 0:
+            return tr("Company Name");
+            break;
+        case 1:
+            return tr("Package");
+            break;
+        case 2:
+            return tr("Price");
+            break;
+        }
+    }
+    return QVariant();
 }

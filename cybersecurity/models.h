@@ -43,6 +43,22 @@ private:
     int cZipcode;
     QString cInterest;
     QString cValue;
+    QString cPackage;
+    double cPrice;
+};
+
+class TransactionModel : public QAbstractTableModel
+{
+public:
+    TransactionModel(QList<transaction> transList, QObject *parent = 0);
+
+    void setList(const QList<transaction> transList);
+    int rowCount(const QModelIndex &parent = QModelIndex()) const;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const;
+    QVariant data(const QModelIndex &index, int role) const;
+    QVariant headerData(int section, Qt::Orientation orientation, int role) const;
+private:
+    QList<transaction> modTransactionList;
 };
 
 #endif // MODELS_H

@@ -127,6 +127,7 @@ public:
 
         passEdit = new QLineEdit(welcomeTab);
         passEdit->setObjectName(QStringLiteral("passEdit"));
+        passEdit->setEchoMode(QLineEdit::Password);
 
         verticalLayout->addWidget(passEdit);
 
@@ -416,7 +417,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

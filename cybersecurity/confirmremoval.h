@@ -1,3 +1,7 @@
+/** @file confirmremoval.h
+ *  @brief allows the admin to confirm whether or not theywant to remove a customer from the database
+ */
+
 #ifndef CONFIRMREMOVAL_H
 #define CONFIRMREMOVAL_H
 

@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
     ui->helpText->setText("To use iCyberSecurity, select the appropriate package and download the installer."
                       " After it has finished installing follow the installation wizard for the setup "
                       "proccess. Open the Application and select what you would like to protect and"
@@ -43,6 +44,10 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_order_clicked()
 {
     QMessageBox orderMsg;
+    adminwindow addWin;
+    QString package;
+    double price;
+    QString name;
     if( ui->lineEdit_name->text().isEmpty() || ui->lineEdit_address->text().isEmpty() || ui->spinBox_zipCode->text().isEmpty() ||
         !(ui->radioButton_Regular->isChecked() || ui->radioButton_Premium->isChecked() || ui->radioButton_Executive->isChecked()) )
     {
@@ -51,6 +56,24 @@ void MainWindow::on_pushButton_order_clicked()
     } else {
         orderMsg.setText("Package Ordered! You will be billed each month until canceled");
         orderMsg.exec();
+        name = ui->lineEdit_name->text();
+        if(ui->radioButton_Regular->isChecked())
+        {
+            package = "Regular";
+            price = 500.00;
+        }
+        else if(ui->radioButton_Premium->isChecked())
+        {
+            package = "Premium";
+            price = 1000.00;
+        }
+        else
+        {
+            package = "Executive";
+            price = 1200.00;
+        }
+
+        DbManager::instance().addTransaction(transaction(package, name, price));
 
         ui->lineEdit_name->clear();
         ui->lineEdit_address->clear();

@@ -9,6 +9,8 @@
 #include <QMessageBox>
 #include <QTextEdit>
 #include <iostream>
+#include "dbmanager.h"
+#include "models.h"
 
 namespace Ui {
 class MainWindow;
@@ -30,6 +32,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
 };
 
 #endif // MAINWINDOW_H

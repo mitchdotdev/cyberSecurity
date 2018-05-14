@@ -18,7 +18,7 @@
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="welcomeTab">
        <attribute name="title">
@@ -50,7 +50,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="passEdit"/>
+         <widget class="QLineEdit" name="passEdit">
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QLabel" name="loginStatus">

@@ -15,6 +15,7 @@
 #include <string>
 #include "customer.h"
 #include "credentials.h"
+#include "transaction.h"
 
 class DbManager
 {
@@ -32,6 +33,8 @@ public:
     Customer GetCustomer(QString companyName);
     QList<Customer> GetKeyCustomers();
     bool VerifyLogin(credentials credentials);
+    bool addTransaction(transaction trans);
+    QList<transaction> GetTransactions();
 private:
 
     DbManager();
