@@ -22,18 +22,19 @@ adminwindow::adminwindow(QWidget *parent) :
     ui->keyTable->setModel(p2Model);
     ui->transTable->setModel(p3Model);
     ui->customerTable->setSelectionBehavior(QAbstractItemView::SelectRows);
+    ui->customerTable->setEditTriggers(QAbstractItemView::DoubleClicked);
     ui->removeCustomer->setEnabled(false);
     ui->customerTable->setSortingEnabled(true);
     ui->keyTable->setSortingEnabled(true);
     ui->transTable->setSortingEnabled(true);
 }
 
-Qt::ItemFlags QAbstractItemModel::flags( const QModelIndex &index ) const
+void adminwindow::on_customerTable_doubleClicked(const QModelIndex &index)
 {
-    if(!index.isValid())
-        return Qt::ItemIsEnabled;
-
-    return QAbstractItemModel::flags(index) | Qt::ItemIsEditable;
+    QModelIndex editIndex = index;
+    qDebug() << ui->customerTable->model()->flags(editIndex).setFlag(Qt::ItemIsEditable, true);
+    qDebug() << editIndex.flags();
+    ui->customerTable->edit(editIndex);
 }
 
 adminwindow::~adminwindow()

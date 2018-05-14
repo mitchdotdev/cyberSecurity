@@ -21,7 +21,8 @@ void requestPamphlet::on_buttonBox_accepted()
     companyCity = ui->city->text();
     companyState = ui->state->text();
 
-    //add to database
+    transaction tran = transaction("Pamphlet", companyName, 0);
+    DbManager::instance().addTransaction(tran);
 
     ui->name->clear();
     ui->address->clear();

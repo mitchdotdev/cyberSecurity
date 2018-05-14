@@ -29,6 +29,8 @@ private slots:
     void on_customerTable_clicked(const QModelIndex &index);
     void on_removeCustomer_clicked();
     void on_transButton_clicked();
+    void on_customerTable_doubleClicked(const QModelIndex &index);
+
 signals:
     void SendModel(CustomerModel *mod);
 
