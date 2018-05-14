@@ -1,7 +1,0 @@
-<RCC>
-    <qresource prefix="/reviews">
-        <file>testimonial1.png</file>
-        <file>testimonial2.png</file>
-        <file>testimonial3.png</file>
-    </qresource>
-</RCC>
