@@ -1,0 +1,12 @@
+*.pro.user
+*.pro.user.*
+*.Debug
+*.Release
+*.o
+moc_*
+cybersecurity/Makefile
+cybersecurity/Makefile.*
+cybersecurity/debug/
+cybersecurity/release/
+build-cybersecurity-Desktop_Qt_5_10_1_MinGW_32bit-Debug/
+DS_STORE
